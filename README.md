@@ -58,6 +58,7 @@ The following images show the web application's appearance and functionality:
 ![Displaying the saved notes on the left columb and the option to delete icons image](/images/image-4.png)
 
 
+[Link to deployed application](https://note-taker-ec.herokuapp.com/)
 
 ## Credits
 <hr>

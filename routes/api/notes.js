@@ -19,3 +19,20 @@ const updateFile = (data) => {
 router.get("/", (req, res) => {
      res.json(db);
    });
+
+   // method POST
+// route /api/notes/
+// method public
+// updates the JSON file with the new note
+router.post("/", (req, res) => {
+     let newNote = {
+       title: req.body.title,
+       text: req.body.text,
+       id: shortid(),
+     };
+     db.push(newNote);
+     updateFile(JSON.stringify(db));
+     res.json(newNote);
+   });
+   
+

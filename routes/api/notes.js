@@ -35,4 +35,19 @@ router.post("/", (req, res) => {
      res.json(newNote);
    });
    
+   // method DELETE
+// route /api/notes/:id
+// method public
+// delete the specified note from the JSON file
+router.delete("/:id", (req, res) => {
+     const id = req.params.id;
+     // remove the specified note from the db
+     db = db.filter((e) => e.id !== id);
+     // updates the JSON file with the new data
+     updateFile(JSON.stringify(db));
+     res.json({ success: true });
+   });
+   
+   module.exports = router;
+   
 
